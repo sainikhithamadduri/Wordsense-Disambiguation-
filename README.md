@@ -1,0 +1,2 @@
+# Wordsense-Disambiguation-
+Word sense disambiguation is a open problem in NLP and ontology, it refers to identification of in which sense a word is used in a sentence, when the word has several meanings. This Python program called decision-list.py implements a decision list classifier to perform word sense disambiguation by identifying features from training data. Logarithm of ratio of probabilities of both senses is used to calculate the likelihood of the learned decision rules
