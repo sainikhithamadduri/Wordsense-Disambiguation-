@@ -1,0 +1,76 @@
+Script started on Wed Oct 31 22:26:29 2018
+[?1034hbash-3.2$ python decision-list.py line-train.xml line-test.xml my-decision-list. txt > my-line-answers.txt
+bash-3.2$  head -50 my-decision-list.txt
+['-1_word_telephone', 8.45532722030456, 'phone']
+['-1_word_access', 7.238404739325079, 'phone']
+['-1_word_car', -6.507794640198696, 'product']
+['-1_word_end', 6.339850002884625, 'phone']
+['1_word_dead', 5.930737337562887, 'phone']
+['-1_word_computer', -5.930737337562887, 'product']
+['-1_word_came', 5.930737337562887, 'phone']
+['-1_word_ps2', -5.930737337562887, 'product']
+['-7_word_telephone', 5.930737337562887, 'phone']
+['-1_word_gab', 5.672425341971496, 'phone']
+['2_word_computers', -5.672425341971496, 'product']
+['-2_word_telephone', 5.672425341971496, 'phone']
+['-8_word_company', -5.672425341971496, 'product']
+['1_word_said', -5.357552004618084, 'product']
+['1_word_computers', -5.357552004618084, 'product']
+['1_word_personal', -5.357552004618084, 'product']
+['-1_word_product', -5.357552004618084, 'product']
+['-1_word_direct', 5.357552004618084, 'phone']
+['-1_word_introduced', -5.357552004618084, 'product']
+['2_word_products', -5.357552004618084, 'product']
+['-2_word_came', 5.357552004618084, 'phone']
+['3_word_said', -5.357552004618084, 'product']
+['-3_word_call', 5.357552004618084, 'phone']
+['-5_word_may', 5.357552004618084, 'phone']
+['-8_word_telephone', 5.357552004618084, 'phone']
+['1_word_growth', 4.954196310386876, 'phone']
+['1_word_increased', 4.954196310386876, 'phone']
+['1_word_grew', 4.954196310386876, 'phone']
+['1_word_went', 4.954196310386876, 'phone']
+['1_word_frozen', -4.954196310386876, 'product']
+['1_word_service', 4.954196310386876, 'phone']
+['-1_word_keep', 4.954196310386876, 'phone']
+['-1_word_ibm', -4.954196310386876, 'product']
+['-1_word_trading', 4.954196310386876, 'phone']
+['-1_word_private', 4.954196310386876, 'phone']
+['-1_word_subscriber', 4.954196310386876, 'phone']
+['-1_word_got', 4.954196310386876, 'phone']
+['-1_word_products', -4.954196310386876, 'product']
+['-1_word_party', 4.954196310386876, 'phone']
+['2_word_line', 4.954196310386876, 'phone']
+['2_word_dead', 4.954196310386876, 'phone']
+['-2_word_private', 4.954196310386876, 'phone']
+['-2_word_tollfree', 4.954196310386876, 'phone']
+['-2_word_sell', -4.954196310386876, 'product']
+['-2_word_ibms', -4.954196310386876, 'product']
+['-2_word_introduced', -4.954196310386876, 'product']
+['-2_word_serves', 4.954196310386876, 'phone']
+['-2_word_incs', -4.954196310386876, 'product']
+['-2_word_recently', -4.954196310386876, 'product']
+['3_word_big', -4.954196310386876, 'product']
+bash-3.2$  head -10 my-line-answers.txt
+<answer instance="line-n.w8_059:8174:" senseid="phone"/>
+<answer instance="line-n.w7_098:12684:" senseid="phone"/>
+<answer instance="line-n.w8_106:13309:" senseid="phone"/>
+<answer instance="line-n.w9_40:10187:" senseid="phone"/>
+<answer instance="line-n.w9_16:217:" senseid="product"/>
+<answer instance="line-n.w8_119:16927:" senseid="product"/>
+<answer instance="line-n.w8_008:13756:" senseid="product"/>
+<answer instance="line-n.w8_041:15186:" senseid="phone"/>
+<answer instance="line-n.art7} aphb 05601797:" senseid="phone"/>
+<answer instance="line-n.w8_119:2964:" senseid="product"/>
+bash-3.2$ python scorer.py my-line-answers.txt line-answers.txt
+Baseline accuracy is 57.14285714285714%
+Accuracy after adding learned features is 84.12698412698413%
+Confusion matrix is
+col_0    phone  product
+row_0                  
+phone       59        7
+product     13       47
+bash-3.2$ exit
+exit
+
+Script done on Wed Oct 31 22:27:57 2018
